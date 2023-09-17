@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "clsx": "^2.0.0",
+    "formik": "^2.4.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.3",
