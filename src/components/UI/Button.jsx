@@ -14,7 +14,7 @@ export const Button = ({
       onClick={onClick}
       className={clsx(
         "rounded-lg py-2 px-4 border-[1px]",
-        "flex items-center justify-around gap-1",
+        "flex items-center gap-3",
         "shadow hover:scale-[0.99] active:shadow-none",
         variant == "primary" && [
           "bg-primary-100 border-primary-100 text-text-50 font-bold shadow-md",

@@ -1,4 +1,4 @@
-import React from "react";
+import { OAuthProviders } from "./OAuthProviders";
 
 export const AuthForm = ({
   heading,
@@ -7,5 +7,16 @@ export const AuthForm = ({
   footertext,
   footerLink,
 }) => {
-  return <section></section>;
+  return (
+    <section>
+      <h1>{heading}</h1>
+      <p>{subheading}</p>
+      <OAuthProviders />
+      {/* <EmailAuthForm onSubmit={onSubmit} /> */}
+      <p>
+        {footertext}
+        {footerLink}
+      </p>
+    </section>
+  );
 };
