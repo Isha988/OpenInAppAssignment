@@ -7,6 +7,7 @@ const Button = ({
   onClick,
   className,
   variant = "primary",
+  ...rest
 }) => {
   return (
     <button
@@ -22,6 +23,7 @@ const Button = ({
         variant == "secondary" && ["bg-bg-10 border-bg-10 text-text-200"],
         className,
       )}
+      {...rest}
     >
       {LeftElement && LeftElement}
       {text}
