@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-const Button = ({
+export const Button = ({
   LeftElement,
   text,
   RightElement,
@@ -31,5 +31,3 @@ const Button = ({
     </button>
   );
 };
-
-export default Button;

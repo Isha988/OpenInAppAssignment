@@ -1,15 +1,15 @@
 import clsx from "clsx";
 
-const Input = ({
+export const Input = ({
   label,
   type = "text",
   name,
   placeholder,
   variant = "outline",
   className,
-  //   field,
-  //   form,
-  //   meta,
+  field,
+  form,
+  meta,
   ...rest
 }) => {
   return (
@@ -37,5 +37,3 @@ const Input = ({
     </div>
   );
 };
-
-export default Input;

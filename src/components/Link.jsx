@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-const Link = ({
+export const Link = ({
   LeftElement,
   text,
   RightElement,
@@ -27,5 +27,3 @@ const Link = ({
     </a>
   );
 };
-
-export default Link;
