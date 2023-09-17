@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     colors: {
       primary: {
@@ -15,6 +15,7 @@ export default {
         200: "var(--bg-200)",
       },
       text: {
+        50: "var(--text-50)",
         100: "var(--text-100)",
         200: "var(--text-200)",
         300: "var(--text-300)",
