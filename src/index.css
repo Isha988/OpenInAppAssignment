@@ -49,4 +49,8 @@
   a {
     @apply font-montserrat;
   }
+
+  body {
+    @apply bg-primary-50 min-w-full min-h-full;
+  }
 }
