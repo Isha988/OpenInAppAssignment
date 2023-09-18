@@ -1,11 +1,13 @@
 import { RouterProvider } from "react-router-dom";
+import { PieChart } from "./components/Dashboard/PieChart";
 import { AuthProvider } from "./context";
 import { router } from "./routes";
 
 const App = () => {
   return (
     <AuthProvider>
-      <RouterProvider router={router} />
+      <PieChart />
+      {/* <RouterProvider router={router} /> */}
     </AuthProvider>
   );
 };
