@@ -11,7 +11,7 @@ const App = () => {
     <AuthProvider>
       {/* <PieChart />
       <BarChart /> */}
-      {/* <RouterProvider router={router} /> */}
+      <RouterProvider router={router} />
       {/* <Modal heading="add New profile" isOpen={isOpen} onClose={onClose}>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi,
@@ -19,8 +19,8 @@ const App = () => {
           sapiente, expedita facilis tenetur, delectus unde deserunt autem
           saepe! Ipsum tenetur tempora dignissimos dolores.
         </p>
-      </Modal> */}
-      <AddProfileCard />
+      </Modal>
+      <AddProfileCard /> */}
     </AuthProvider>
   );
 };
