@@ -48,7 +48,8 @@
   h2,
   h3,
   h4,
-  a, .heading{
+  a,
+  .heading {
     @apply font-montserrat;
   }
 
