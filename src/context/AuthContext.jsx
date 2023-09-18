@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   //  signin with email password
-  const singIn = async (email, password) => {
+  const signIn = async (email, password) => {
     try {
       setIsLoading(true);
       setError(null);
@@ -75,7 +75,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ user, isLoading, error, signUp, singIn, googleSignIn, signOut }}
+      value={{ user, isLoading, error, signUp, signIn, googleSignIn, signOut }}
     >
       {children}
     </AuthContext.Provider>

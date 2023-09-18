@@ -14,7 +14,7 @@ export const Link = ({
       href={href}
       className={clsx(
         "inline-flex items-center justify-around gap-1",
-        "text-base hover:font-bold",
+        "hover:font-bold",
         variant == "primary" && ["text-primary-100"],
         variant == "secondary" && ["text-text-50"],
         className,

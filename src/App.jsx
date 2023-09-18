@@ -1,10 +1,11 @@
-import { AuthForm } from "./components/AuthForm/AuthForm";
 import { AuthProvider } from "./context";
+import { SignIn, SignUp } from "./pages/Auth";
 
 const App = () => {
   return (
     <AuthProvider>
-      <AuthForm />
+      <SignIn />
+      <SignUp />
     </AuthProvider>
   );
 };

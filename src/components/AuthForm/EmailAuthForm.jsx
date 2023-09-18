@@ -10,7 +10,7 @@ const FormSchema = Yup.object().shape({
     .required("Required"),
 });
 
-export const EmailAuthForm = () => {
+export const EmailAuthForm = ({ onSubmit, submitButtonText }) => {
   return (
     <Card variant="normal" className="p-6">
       <Formik
@@ -45,7 +45,7 @@ export const EmailAuthForm = () => {
               variant="secondary"
             />
             <p className="text-primary-100 text-sm">Forgot Password?</p>
-            <Button type="Submit" text="Sign In" />
+            <Button type="Submit" text={submitButtonText} />
           </Form>
         )}
       </Formik>
