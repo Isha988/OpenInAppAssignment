@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { addProfile} from "../../../api/Profile";
 import { Modal } from "../../UI";
 import { StepBasic } from "./StepBasic";
 import { StepSocial } from "./StepSocial";
+import { AuthContext } from "../../../context";
 
 export const AddProfileForm = ({ isOpen, onClose }) => {
+  const { user } = useContext(AuthContext);
   const initialProfile = {
     name: "",
     email: "",
@@ -25,9 +28,9 @@ export const AddProfileForm = ({ isOpen, onClose }) => {
   };
 
   const onDone = (value) => {
-    console.log(profile);
-    console.log({ ...profile, value });
+    addProfile({ ...profile, ...value, uid: user.uid });
   };
+
   return (
     <Modal
       heading="add new profile"
