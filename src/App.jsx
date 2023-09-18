@@ -1,5 +1,5 @@
 import { RouterProvider } from "react-router-dom";
-import { AddProfileCard } from "./components/Dashboard/AddProfileCard/AddProfileCard";
+import { AddProfileCard } from "./components/Dashboard";
 import { BarChart } from "./components/Dashboard/BarChart";
 import { PieChart } from "./components/Dashboard/PieChart";
 import { Modal } from "./components/UI/Modal";

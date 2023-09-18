@@ -7,5 +7,5 @@ export const useModal = () => {
 
   const onClose = () => setIsOpen(false);
 
-  return {isOpen, onClose, onOpen};
+  return { isOpen, onClose, onOpen };
 };
