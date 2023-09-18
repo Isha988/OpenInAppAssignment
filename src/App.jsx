@@ -11,9 +11,14 @@ const App = () => {
       {/* <PieChart />
       <BarChart /> */}
       {/* <RouterProvider router={router} /> */}
-      <Modal>
-        <p>hello</p>
-      </Modal>
+      {/* <Modal heading="add New profile" isOpen={isOpen} onClose={onClose}>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi,
+          error soluta excepturi repellat doloremque asperiores consectetur
+          sapiente, expedita facilis tenetur, delectus unde deserunt autem
+          saepe! Ipsum tenetur tempora dignissimos dolores.
+        </p>
+      </Modal> */}
     </AuthProvider>
   );
 };
