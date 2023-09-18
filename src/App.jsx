@@ -1,4 +1,5 @@
 import { RouterProvider } from "react-router-dom";
+import { AddProfileCard } from "./components/Dashboard/AddProfileCard/AddProfileCard";
 import { BarChart } from "./components/Dashboard/BarChart";
 import { PieChart } from "./components/Dashboard/PieChart";
 import { Modal } from "./components/UI/Modal";
@@ -19,6 +20,7 @@ const App = () => {
           saepe! Ipsum tenetur tempora dignissimos dolores.
         </p>
       </Modal> */}
+      <AddProfileCard />
     </AuthProvider>
   );
 };
