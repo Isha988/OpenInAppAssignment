@@ -32,6 +32,8 @@
     --purple-100: #a9b0e5;
     --purple-200: #8a94e0;
 
+    --error: #fa2d2d;
+
     scroll-behaviour: smooth;
   }
 
@@ -51,6 +53,6 @@
   }
 
   body {
-    @apply bg-primary-50 min-w-full min-h-full;
+    @apply bg-primary-50 p-4;
   }
 }

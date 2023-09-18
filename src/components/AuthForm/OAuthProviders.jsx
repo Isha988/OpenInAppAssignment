@@ -13,14 +13,14 @@ export const OAuthProviders = () => {
         text="Sign in with Google"
         onClick={googleSignIn}
         variant="secondary"
-        className="text-xs"
+        className="text-xs flex-1"
       />
       <Button
         LeftElement={<img src={appleLogo} className="w-3.5 h-3.5" />}
         text="Sign in with Apple"
         onClick={googleSignIn}
         variant="secondary"
-        className="text-xs"
+        className="text-xs flex-1"
       />
     </div>
   );

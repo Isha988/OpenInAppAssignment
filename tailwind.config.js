@@ -36,6 +36,8 @@ export default {
         100: "var(--purple-100)",
         200: "var(--purple-200)",
       },
+
+      error: "var(--error)",
     },
     fontFamily: {
       montserrat: ["Montserrat", "sans-serif"],

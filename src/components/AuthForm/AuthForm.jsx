@@ -1,4 +1,5 @@
 import { OAuthProviders } from "./OAuthProviders";
+import { EmailAuthForm } from "./EmailAuthForm";
 
 export const AuthForm = ({
   heading,
@@ -8,11 +9,11 @@ export const AuthForm = ({
   footerLink,
 }) => {
   return (
-    <section>
+    <section className="grid gap-5">
       <h1>{heading}</h1>
       <p>{subheading}</p>
       <OAuthProviders />
-      {/* <EmailAuthForm onSubmit={onSubmit} /> */}
+      <EmailAuthForm onSubmit={onSubmit}/>
       <p>
         {footertext}
         {footerLink}

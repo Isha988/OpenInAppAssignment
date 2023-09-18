@@ -1,10 +1,10 @@
 import clsx from "clsx";
 
-const Card = ({ children, className, variant = "normal", ...rest }) => {
+export const Card = ({ children, className, variant = "shadow", ...rest }) => {
   return (
     <div
       className={clsx(
-        "bg-bg-10 rounded-lg py-16",
+        "bg-bg-10 rounded-lg p-4",
         variant == "shadow" && ["shadow-lg"],
         className,
       )}
@@ -14,5 +14,3 @@ const Card = ({ children, className, variant = "normal", ...rest }) => {
     </div>
   );
 };
-
-export default Card;
