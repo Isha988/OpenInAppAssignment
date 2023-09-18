@@ -6,15 +6,20 @@ import {
 import { PublicRoute } from "./PublicRoute";
 import { PrivateRoute } from "./PrivatedRoute";
 import { SignIn, SignUp, Auth } from "../pages/Auth";
-import {Dashboard, Layout } from "../pages";
+import { Dashboard, Layout } from "../pages";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="/" element={
-        <PrivateRoute><Layout/></PrivateRoute>
-      }>
-        <Route path="/dashboard" element={<Dashboard/>} />
+      <Route
+        path="/"
+        element={
+          <PrivateRoute>
+            <Layout />
+          </PrivateRoute>
+        }
+      >
+        <Route path="/dashboard" element={<Dashboard />} />
       </Route>
       <Route
         path="auth"
@@ -27,6 +32,6 @@ export const router = createBrowserRouter(
         <Route path="/auth/signin" element={<SignIn />} />
         <Route path="/auth/signup" element={<SignUp />} />
       </Route>
-    </Route>
+    </Route>,
   ),
 );
