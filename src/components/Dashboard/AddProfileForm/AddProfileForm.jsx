@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { addProfile} from "../../../api/Profile";
+import { addProfile } from "../../../api/Profile";
 import { Modal } from "../../UI";
 import { StepBasic } from "./StepBasic";
 import { StepSocial } from "./StepSocial";

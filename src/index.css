@@ -48,11 +48,17 @@
   h2,
   h3,
   h4,
-  a {
+  a, .heading{
     @apply font-montserrat;
   }
 
   body {
-    @apply bg-primary-50 p-4;
+    @apply bg-primary-50;
+  }
+
+  html,
+  body,
+  #root {
+    @apply h-full;
   }
 }

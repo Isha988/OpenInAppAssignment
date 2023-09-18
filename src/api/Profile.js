@@ -26,7 +26,7 @@ export const getProfiles = async (uid) => {
     orderBy("createdAt", "desc"),
   );
   const snapshot = await getDocs(collectionQuery);
-    let profiles = [];
+  let profiles = [];
   snapshot.forEach((doc) => {
     profiles.push(doc.data());
   });
