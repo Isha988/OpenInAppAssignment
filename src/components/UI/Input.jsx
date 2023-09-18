@@ -33,9 +33,7 @@ export const Input = ({
         )}
         {...rest}
       />
-      {error && touched ? (
-        <p className="text-xs text-error mb-2">{error}</p>
-      ) : null}
+      {error && touched ? <p className="text-xs text-error">{error}</p> : null}
     </div>
   );
 };
