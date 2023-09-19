@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import { Outlet } from "react-router-dom";
-import { clsx } from "clsx";
 import { BsGithub } from "react-icons/bs";
-import { Link } from "../../components/UI";
+import { clsx } from "clsx";
+import { AuthContext } from "../../context";
+import { Link, Loader } from "../../components/UI";
 
 export const Auth = () => {
+  const { isLoading } = useContext(AuthContext);
   return (
     <section
       className={clsx(
@@ -15,6 +18,7 @@ export const Auth = () => {
       {/* forms */}
       <div className="md:flex-1 w-full md:pr-8">
         <div className="w-full max-w-[420px] m-auto md:m-0">
+          {isLoading && <Loader />}
           <Outlet />
         </div>
       </div>
