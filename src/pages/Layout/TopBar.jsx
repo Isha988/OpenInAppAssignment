@@ -3,10 +3,10 @@ import { IoSearchOutline } from "react-icons/io5";
 import { useContext } from "react";
 import { AuthContext } from "../../context";
 
-export const TopBar = () => {
+export const TopBar = ({ className }) => {
   const { user } = useContext(AuthContext);
   return (
-    <div className="flex gap-4 items-center">
+    <div className={`flex gap-4 items-center ${className}`}>
       <h1 className="font-bold text-2xl flex-1">Dashboard</h1>
       <div className="hidden sm:flex bg-bg-10 gap-2 px-6 py-2 rounded-lg">
         <input className="bg-transparent outline-none" placeholder="search.." />
