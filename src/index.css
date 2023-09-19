@@ -64,9 +64,9 @@
   }
 }
 
-.hideScroll{
+.hideScroll {
   scrollbar-width: none;
 }
-.hideScroll::-webkit-scrollbar{
+.hideScroll::-webkit-scrollbar {
   width: none;
 }

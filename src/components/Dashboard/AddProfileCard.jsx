@@ -2,11 +2,13 @@ import { clsx } from "clsx";
 import { Card, useModal } from "../UI";
 import { AddProfileForm } from "./AddProfileForm";
 
-export const AddProfileCard = ({className}) => {
+export const AddProfileCard = ({ className }) => {
   const { isOpen, onOpen, onClose } = useModal();
   return (
     <>
-      <Card className={`flex justify-center items-center flex-col ${className}`}>
+      <Card
+        className={`flex justify-center items-center flex-col ${className}`}
+      >
         <div
           className={clsx(
             "w-20 h-20 rounded-full mb-2",
