@@ -13,7 +13,7 @@ export const ProfileCard = ({
     <Card className={`p-6 px-8 rpunded-xl ${className}`}>
       <h2 className="font-bold text-lg mb-8 capitalize">{name}</h2>
       <div className="flex flex-wrap gap-4">
-          {/* ohone and email */}
+        {/* phone and email */}
         <div className="flex-1">
           <div className="mb-4 flex gap-4 items-center">
             <div className="bg-green-100 w-[30px] h-[30px] rounded-full flex items-center justify-center">
