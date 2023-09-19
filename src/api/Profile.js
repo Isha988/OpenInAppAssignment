@@ -23,7 +23,6 @@ export const getProfiles = async (uid) => {
   const collectionQuery = query(
     collection(db, "profiles"),
     where("uid", "==", uid),
-    orderBy("createdAt", "desc"),
   );
   const snapshot = await getDocs(collectionQuery);
   let profiles = [];
