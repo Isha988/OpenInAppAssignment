@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { addProfile, getProfiles } from "../../../api/Profile";
-import { Modal, Toast } from "../../UI";
+import { Modal, Toast, Loader } from "../../UI";
 import { StepBasic } from "./StepBasic";
 import { StepSocial } from "./StepSocial";
 import { AuthContext } from "../../../context";
@@ -48,10 +48,11 @@ export const AddProfileForm = ({ isOpen, onClose, setProfiles }) => {
       {error && <Toast message={error} />}
       <Modal
         heading="add new profile"
-        className="w-full max-w-[540px] p-6 mx-2"
+        className="w-full max-w-[540px] p-6 mx-2 relative"
         isOpen={isOpen}
         onClose={onClose}
       >
+        {isLoading && <Loader />}
         {step == 1 && (
           <StepBasic
             onNext={onNext}

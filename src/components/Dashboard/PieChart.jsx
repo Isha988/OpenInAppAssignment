@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Chart } from "chart.js/auto";
 import { Doughnut } from "react-chartjs-2";
 import { pieChart } from "../../api/Charts";
-import { Card, Toast } from "../UI";
+import { Card, Toast, Loader } from "../UI";
 
 export const PieChart = ({ className }) => {
   const backgroundColor = ["#98d89e", "#ee8484", "#f6dc7d", "#8a94e0"];
@@ -36,7 +36,8 @@ export const PieChart = ({ className }) => {
   return (
     <>
       {error && <Toast message={error} />}
-      <Card className={`p-6 px-8 rpunded-xl ${className}`}>
+      <Card className={`p-6 px-8 rpunded-xl relative ${className}`}>
+        {isLoading && <Loader />}
         {/* header */}
         <div className="flex flex-wrap mb-8 items-center justify-between gap-x-4 gap-y-1">
           <h2 className="font-bold text-lg">Activities</h2>
@@ -46,7 +47,7 @@ export const PieChart = ({ className }) => {
         </div>
         {/* chart */}
         <div className="flex flex-wrap items-center justify-between gap-6">
-          <div className="max-h-[200px] flex-1">
+          <div className="max-h-[140px] flex-1">
             <Doughnut
               type="doughnut"
               data={{

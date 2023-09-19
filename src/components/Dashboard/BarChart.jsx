@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Chart } from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 import { barChart } from "../../api/Charts";
-import { Card, Toast } from "../UI";
+import { Card, Loader, Toast } from "../UI";
 
 export const BarChart = ({ className }) => {
   const backgroundColor = { female: "#98d89e", male: "#ee8484" };
@@ -30,7 +30,8 @@ export const BarChart = ({ className }) => {
   return (
     <>
       {error && <Toast message={error} />}
-      <Card className={`p-6 px-8 rpunded-xl ${className}`}>
+      <Card className={`p-6 px-8 rpunded-xl relative ${className}`}>
+        {isLoading && <Loader />}
         {/* header */}
         <div className="mb-8">
           <h2 className="font-bold text-lg">Activities</h2>
