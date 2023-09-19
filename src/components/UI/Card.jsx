@@ -5,7 +5,7 @@ export const Card = ({ children, className, variant = "shadow", ...rest }) => {
     <div
       className={clsx(
         "bg-bg-10 rounded-lg p-4",
-        variant == "shadow" && ["shadow-lg"],
+        variant == "shadow" && ["shadow-md"],
         className,
       )}
       {...rest}

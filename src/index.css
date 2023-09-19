@@ -63,3 +63,10 @@
     @apply h-full;
   }
 }
+
+.hideScroll{
+  scrollbar-width: none;
+}
+.hideScroll::-webkit-scrollbar{
+  width: none;
+}

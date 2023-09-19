@@ -4,9 +4,9 @@ import { Doughnut } from "react-chartjs-2";
 import { pieChart } from "../../api/Charts";
 import { Card } from "../UI";
 
-export const PieChart = () => {
+export const PieChart = ({className}) => {
   const backgroundColor = ["#98d89e", "#ee8484", "#f6dc7d", "#8a94e0"];
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({labels:["a", "s", "d"], values:[12, 50, 40]});
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -25,12 +25,12 @@ export const PieChart = () => {
     }
   };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
   return (
-    <Card>
+    <Card className={className}>
       <Doughnut
         type="doughnut"
         data={{
