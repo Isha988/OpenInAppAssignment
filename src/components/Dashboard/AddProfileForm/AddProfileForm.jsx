@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { addProfile } from "../../../api/Profile";
-import { Modal } from "../../UI";
+import { Modal, Toast } from "../../UI";
 import { StepBasic } from "./StepBasic";
 import { StepSocial } from "./StepSocial";
 import { AuthContext } from "../../../context";
@@ -16,6 +16,8 @@ export const AddProfileForm = ({ isOpen, onClose }) => {
   };
   const [profile, setProfile] = useState(initialProfile);
   const [step, setStep] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const onBack = (value) => {
     setProfile({ ...profile, ...value });
@@ -27,37 +29,48 @@ export const AddProfileForm = ({ isOpen, onClose }) => {
     setStep(2);
   };
 
-  const onDone = (value) => {
-    addProfile({ ...profile, ...value, uid: user.uid });
+  const onDone = async (value) => {
+    try {
+      setIsLoading(true);
+      await addProfile({ ...profile, ...value, uid: user.uid });
+      setIsLoading(false);
+      onClose();
+    } catch (error) {
+      setIsLoading(false);
+      setError(error.message);
+    }
   };
 
   return (
-    <Modal
-      heading="add new profile"
-      className="w-full max-w-[540px] p-6 mx-2"
-      isOpen={isOpen}
-      onClose={onClose}
-    >
-      {step == 1 && (
-        <StepBasic
-          onNext={onNext}
-          initialValues={{
-            name: profile.name,
-            email: profile.email,
-            phone: profile.phone,
-          }}
-        />
-      )}
-      {step == 2 && (
-        <StepSocial
-          onBack={onBack}
-          onDone={onDone}
-          initialValues={{
-            instagram: profile.instagram,
-            youtube: profile.youtube,
-          }}
-        />
-      )}
-    </Modal>
+    <>
+      {error && <Toast message={error} />}
+      <Modal
+        heading="add new profile"
+        className="w-full max-w-[540px] p-6 mx-2"
+        isOpen={isOpen}
+        onClose={onClose}
+      >
+        {step == 1 && (
+          <StepBasic
+            onNext={onNext}
+            initialValues={{
+              name: profile.name,
+              email: profile.email,
+              phone: profile.phone,
+            }}
+          />
+        )}
+        {step == 2 && (
+          <StepSocial
+            onBack={onBack}
+            onDone={onDone}
+            initialValues={{
+              instagram: profile.instagram,
+              youtube: profile.youtube,
+            }}
+          />
+        )}
+      </Modal>
+    </>
   );
 };

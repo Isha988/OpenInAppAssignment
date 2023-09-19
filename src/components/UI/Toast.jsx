@@ -10,7 +10,7 @@ export const Toast = ({ message }) => {
         <Card
           className={clsx(
             "p-4 w-[90%] max-w-[400px] rounded border-b-2 border-error",
-            "fixed right-6 top-6",
+            "fixed right-6 top-6 z-[100]",
           )}
         >
           <div

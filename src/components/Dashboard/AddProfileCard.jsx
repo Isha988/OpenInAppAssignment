@@ -7,7 +7,7 @@ export const AddProfileCard = ({ className }) => {
   return (
     <>
       <Card
-        className={`flex justify-center items-center flex-col ${className}`}
+        className={`p-6 px-8 rpunded-xl flex justify-center items-center flex-col ${className}`}
       >
         <div
           className={clsx(
