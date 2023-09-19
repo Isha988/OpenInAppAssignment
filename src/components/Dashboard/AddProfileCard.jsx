@@ -2,7 +2,7 @@ import { clsx } from "clsx";
 import { Card, useModal } from "../UI";
 import { AddProfileForm } from "./AddProfileForm";
 
-export const AddProfileCard = ({ className }) => {
+export const AddProfileCard = ({ className, setProfiles }) => {
   const { isOpen, onOpen, onClose } = useModal();
   return (
     <>
@@ -21,7 +21,13 @@ export const AddProfileCard = ({ className }) => {
         </div>
         <p className="text-text-200 font-medium">Add Profile</p>
       </Card>
-      {isOpen && <AddProfileForm isOpen={isOpen} onClose={onClose} />}
+      {isOpen && (
+        <AddProfileForm
+          isOpen={isOpen}
+          onClose={onClose}
+          setProfiles={setProfiles}
+        />
+      )}
     </>
   );
 };

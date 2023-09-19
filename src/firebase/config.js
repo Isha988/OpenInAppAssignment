@@ -3,12 +3,17 @@ import { getAuth } from "firebase/auth";
 import { getFirestore, serverTimestamp, collection } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAkKrcPaCoee3OS0WdmlIQ6vidG04rcNDU",
-  authDomain: "openinapp-4fc92.firebaseapp.com",
-  projectId: "openinapp-4fc92",
-  storageBucket: "openinapp-4fc92.appspot.com",
-  messagingSenderId: "873168923345",
-  appId: "1:873168923345:web:e3fdb1a752a8668bdcf3f0",
+  apiKey: "AIzaSyDQZ3Op4eG-tPMH7TTelPB1IPMWS9R9Znc",
+
+  authDomain: "openinapp2.firebaseapp.com",
+
+  projectId: "openinapp2",
+
+  storageBucket: "openinapp2.appspot.com",
+
+  messagingSenderId: "455947371332",
+
+  appId: "1:455947371332:web:5be4d32d52c2a772a54d11",
 };
 
 // Initialize Firebase

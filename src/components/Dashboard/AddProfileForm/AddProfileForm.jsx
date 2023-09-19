@@ -1,11 +1,11 @@
 import { useState, useContext } from "react";
-import { addProfile } from "../../../api/Profile";
+import { addProfile, getProfiles } from "../../../api/Profile";
 import { Modal, Toast } from "../../UI";
 import { StepBasic } from "./StepBasic";
 import { StepSocial } from "./StepSocial";
 import { AuthContext } from "../../../context";
 
-export const AddProfileForm = ({ isOpen, onClose }) => {
+export const AddProfileForm = ({ isOpen, onClose, setProfiles }) => {
   const { user } = useContext(AuthContext);
   const initialProfile = {
     name: "",
@@ -33,11 +33,13 @@ export const AddProfileForm = ({ isOpen, onClose }) => {
     try {
       setIsLoading(true);
       await addProfile({ ...profile, ...value, uid: user.uid });
+      const res = await getProfiles(user.uid);
+      setProfiles(res);
       setIsLoading(false);
       onClose();
     } catch (error) {
+      setError(error);
       setIsLoading(false);
-      setError(error.message);
     }
   };
 

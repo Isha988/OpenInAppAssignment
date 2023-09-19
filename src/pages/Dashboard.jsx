@@ -32,19 +32,19 @@ export const Dashboard = () => {
 
   useEffect(() => {
     fetchDocs();
-  }, [collectionRef("profiles")]);
+  }, []);
 
   return (
     <>
-      <section className="grid grid-cols-4 grid-row-flow gap-6">
-        <BarChart className="col-span-4" />
-        <PieChart className="col-span-2" />
+      <section className="grid sm:grid-cols-4 sm:grid-row-flow gap-6">
+        <BarChart className="sm:col-span-4" />
+        <PieChart className="sm:col-span-2" />
         {profiles?.map((profile) => (
-          <ProfileCard {...profile} className="col-span-2" />
+          <ProfileCard {...profile} className="sm:col-span-2" />
         ))}
-        <AddProfileCard className="col-span-2" />
+        <AddProfileCard className="sm:col-span-2" setProfiles={setProfiles} />
       </section>
-      {error && <Toast message={error} />}
+      {error && <Toast message={error.message} />}
     </>
   );
 };
